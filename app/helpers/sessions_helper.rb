@@ -1,5 +1,5 @@
 module SessionsHelper
-  include SessionsHelper
+
   # SessionHelper manages @current_user, that's the user currently
   # signed in.
 
