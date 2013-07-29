@@ -8,5 +8,10 @@ CookBook::Application.routes.draw do
   #delete '/signout' => 'sessions#destroy'
 
   root to: 'books#index'
+
+  get '/data.json' => 'stats#data'
+  get '/stats' => 'stats#stats'
+
+
 end
 
