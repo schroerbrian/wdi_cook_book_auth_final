@@ -1,14 +1,21 @@
-<%= link_to('New Recipe', new_recipe_path) %>
-:: <%= link_to('Edit Recipe', edit_recipe_path(@recipe)) %>
-:: <%= link_to('Delete Recipe', @recipe, :method => :delete, :confirm => 'Are you sure?') %>
-<div class='spacer'></div>
-
-<ul>
-  <li><%= @recipe.name %></li>
-  <li><%= image_tag(@recipe.image) %></li>
-
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
-    <li><%= image_tag(ingredient.image) %></li>
-  <% end %>
+<ul class="nav nav-pills">
+  <li><%= link_to('New Recipe', new_recipe_path) %></li>
+  <li><%= link_to('Edit Recipe', edit_recipe_path(@recipe)) %></li>
+  <li><%= link_to('Delete Recipe', @recipe, :method => :delete, :confirm => 'Are you sure?') %></li>
+  <div class='spacer'></div>
 </ul>
+
+<div class="row">
+  <div class="span3 offset1">
+    <p class="lead"><%= @recipe.name %></p>
+    <div class="span8">
+      <p class="text-warning"><%= image_tag(@recipe.image) %></p>
+    </div>
+  </div>
+  <div class="span8">
+    <% @recipe.ingredients.each do |ingredient| %>
+      <p><%= ingredient.name %>
+      <%= image_tag(ingredient.image,  size: "40x40") %></p>
+    <% end %>
+  </div>
+</div>

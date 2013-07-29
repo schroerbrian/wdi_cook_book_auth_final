@@ -3,7 +3,7 @@ class StatsController < ApplicationController
   def stats
   end
 
-  def stats
+  def data
     data = [
             { y: 'Books', a: Book.count },
             { y: 'Recipes', a: Recipe.count },
