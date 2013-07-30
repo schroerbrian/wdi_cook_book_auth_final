@@ -18,6 +18,30 @@
 </div>
 
 <br>
+
+<hr>
+<h2>Comments</h2>
+
+<div class="comment_container">
+  <% @book.comments.each do |comment| %>
+  <div class="row">
+      <div class="span3 offset1">
+        <p><strong><%= comment.name %></strong></p>
+      </div>
+
+      <div class="span6">
+        <p><%= comment.body %></p>
+      </div>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to "Add a Comment", new_comment_path(book_id: @book.id), :remote => true %>
+
+<div id="new_comment"/>
+<hr>
+
+<h2>Recipes</h2>
 <% @book.recipes.each do |recipe| %>
   <div class="row">
     <div class="span3 offset1">
@@ -33,4 +57,6 @@
     </div>
    </div>
 <% end %>
+
+
 

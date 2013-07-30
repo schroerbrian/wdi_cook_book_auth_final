@@ -16,6 +16,9 @@ i4 = Ingredient.create(:name => 'Milk', :measurement => '4 cups', :cost => 6.95,
 i5 = Ingredient.create(:name => 'Butter', :measurement => '1 stick', :cost => 3.45, :image => 'http://www.cheesemaking.com/images/recipes/35Butter/Pics/pic51.jpg')
 i6 = Ingredient.create(:name => 'Bacon', :measurement => '8 whole', :cost => 9.73, :image => 'http://4.bp.blogspot.com/-HX7l3B-dPXY/UN0FeGidWHI/AAAAAAAADZE/FF9svNR700I/s1600/crispy-bacon.jpg')
 
+c1 = Comment.create(:name => 'My fav cook book', body: "This is the most useful book ever")
+
+b1.comments =[c1]
 b1.recipes = [r1, r2]
 b1.recipes << r3
 

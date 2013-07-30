@@ -12,6 +12,8 @@
 #
 
 class Book < ActiveRecord::Base
-  attr_accessible :title, :cuisine, :chef, :image, :recipe_ids
+  attr_accessible :title, :cuisine, :chef, :image, :recipe_ids, :comment_ids
   has_many :recipes
+  has_many :comments
+
 end

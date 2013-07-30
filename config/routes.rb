@@ -1,5 +1,5 @@
 CookBook::Application.routes.draw do
-  resources :books, :recipes, :ingredients, :users, :sessions
+  resources :books, :recipes, :ingredients, :users, :sessions, :comments
 
   get '/signup' => 'users#new'
   match '/signout', to: 'sessions#destroy', via: :delete
@@ -9,7 +9,6 @@ CookBook::Application.routes.draw do
 
   get '/data.json' => 'stats#data'
   get '/stats' => 'stats#stats'
-
 
 end
 
