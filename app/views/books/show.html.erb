@@ -36,9 +36,8 @@
   <% end %>
 </div>
 
-<%= link_to "Add a Comment", new_comment_path(book_id: @book.id), :remote => true %>
+<%= link_to "Add a Comment", new_comment_path(book_id: @book.id) %>
 
-<div id="new_comment"/>
 <hr>
 
 <h2>Recipes</h2>
