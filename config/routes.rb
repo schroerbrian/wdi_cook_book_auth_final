@@ -10,5 +10,7 @@ CookBook::Application.routes.draw do
   get '/data.json' => 'stats#data'
   get '/stats' => 'stats#stats'
 
+  get '/users' => 'users#index'
+
 end
 

@@ -6,3 +6,5 @@ app.factory "User", ["$resource", ($resource) ->
 
 @UserCtrl = ["$scope", "User", ($scope, User) ->
   $scope.users = User.query()
+  $scope.test = "1 2 3"
+]

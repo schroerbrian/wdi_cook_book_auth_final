@@ -1,8 +1,14 @@
 class UsersController < ApplicationController
   respond_to :json
-
+  respond_to :html
+  
   def index
-    respond_with User.all  
+    @users = User.all
+    
+    respond_to do |format|
+     format.html 
+     format.json { render json: @users }
+    end  
   end
 
   def show
