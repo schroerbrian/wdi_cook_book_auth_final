@@ -26,4 +26,8 @@ r1.ingredients = [i1, i2, i4]
 r2.ingredients = [i1, i2, i4, i5, i6]
 r3.ingredients = [i2, i3, i4]
 
-#User.create(:name => 'Markus',  email: "mguehrs@gmail.com", password: "foobar123", password_confirmation: "foobar123")
+u1 = User.create(:name => 'Markus',  email: "mguehrs@gmail.coop", password: "foobar123", password_confirmation: "foobar123", active_flag: true, admin_flag: false)
+u2 = User.create(:name => 'Ted',  email: "ted@gmail.co", password: "foobar123", password_confirmation: "foobar123", active_flag: false, admin_flag: false)
+u3 = User.create(:name => 'Bill',  email: "bill@gmail.co", password: "foobar123", password_confirmation: "foobar123", active_flag: false, admin_flag: false)
+u4 = User.create(:name => 'Nancy',  email: "mguehrs@gmail.co", password: "foobar123", password_confirmation: "foobar123", active_flag: true, admin_flag: true)
+

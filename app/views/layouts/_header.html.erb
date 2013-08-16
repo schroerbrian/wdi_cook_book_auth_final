@@ -7,7 +7,13 @@
         </ul>
         <ul class="nav pull-right">
             <li><%= link_to "Stats", stats_path %></li>
-            <% if signed_in? %>
+            <% if signed_in? && current_user.admin_flag? %>
+              <li><%= link_to "Admin", users_path %></li>
+              <li><%= link_to "My profile", current_user %></li>
+              <li>
+                <%= link_to "Sign out", signout_path, method: "delete" %>
+              </li>
+            <% elsif signed_in? %>
               <li><%= link_to "My profile", current_user %></li>
               <li>
                 <%= link_to "Sign out", signout_path, method: "delete" %>
@@ -21,3 +27,5 @@
     </div>
   </div>
 </header>
+
+</li>

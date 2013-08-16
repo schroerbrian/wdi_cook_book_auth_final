@@ -1,0 +1,15 @@
+<h1>User Admin Page</h1>
+
+<div ng-controller="UserCtrl" >
+
+	<ul>
+		<li ng-repeat="user in users">
+			<span> {{user.name}}    
+			</span>
+<!-- 			<button ng-click="deleteEntry(entry)">Delete</button>
+ -->			<!-- <span ng-show="entry.winner" ng-class="{highlight: entry == lastWinner}"
+			class="winner">WINNER</span> -->
+		</li>
+	</ul>
+
+</div>
